@@ -13,3 +13,16 @@
     margin-left: 5%;
     margin-bottom: 5%;
 }
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  .card {
+      display: inline-block;
+      max-width: 200px;
+      white-space: initial;
+  }
+  .cardHolder{
+    display: flex;
+  }
