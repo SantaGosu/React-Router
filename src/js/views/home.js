@@ -10,5 +10,10 @@ export const Home = () => (
 		<Card />
 		<Card />
 		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
+		<Card />
 	</div>
 );

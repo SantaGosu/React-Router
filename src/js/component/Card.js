@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Card = () => {
+
+	const getPeopleId = () => {
+		fetch(`https://swapi.dev/api/people/`, {
+			method: "GET",
+        	headers: {"Content-type": "application/json;charset=UTF-8"}
+		})
+		.then(response => response.json())
+      	.then(json => console.log(json))
+      	.catch(err => console.log("ERROR FOR GET: " + err.message))
+	}
+
+	useEffect(() => {
+		getPeopleId()	
+	})
+
+
     return(
 		<>
 		<div>
