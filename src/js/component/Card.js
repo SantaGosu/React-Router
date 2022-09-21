@@ -15,7 +15,7 @@ const Card = () => {
 
 	useEffect(() => {
 		getPeopleId()	
-	})
+	},[])
 
 
     return(

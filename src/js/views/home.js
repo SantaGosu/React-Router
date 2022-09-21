@@ -1,19 +1,17 @@
 import React from "react";
 import "../../styles/home.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from "../component/Card";
+import CardContainer from "../views/CardContainer";
 
 export const Home = () => (
-	<div className="cardHolder scrolling-wrapper">
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-		<Card />
-	</div>
+	<>
+		<h1>Characters</h1>
+			<CardContainer />
+			<br />
+		<h1>Vehicles</h1>
+			<CardContainer />
+			<br />
+		<h1>Planets</h1>
+			<CardContainer />
+	</>
 );
