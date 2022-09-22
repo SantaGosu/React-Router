@@ -9,9 +9,10 @@ export const Home = () => (
 			<CardContainer />
 			<br />
 		<h1>Vehicles</h1>
-			<CardContainer />
+			
 			<br />
 		<h1>Planets</h1>
-			<CardContainer />
+			
 	</>
 );
+export default Home;
