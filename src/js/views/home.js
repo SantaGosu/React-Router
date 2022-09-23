@@ -1,9 +1,13 @@
 import React from "react";
 import "../../styles/home.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import VehicleContainer from "./VehicleContainer";
 import CardContainer from "./CardContainer";
+import PlanetContainer from "./PlanetContainer";
 
-export const Home = () => {
+
+
+const Home = () => {
 
 
 	return(<>
@@ -11,8 +15,11 @@ export const Home = () => {
 			<CardContainer />
 			<br />
 		<h1>Vehicles</h1>
+			<VehicleContainer />
 			<br />
 		<h1>Planets</h1>
+		<PlanetContainer />
+            <br />
 		</>
 		)
 }

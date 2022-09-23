@@ -4,24 +4,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const CardContainer = () => {
-    const [id, setId] = useState([])
+    const [people, getPeople] = useState([])
 
-    const getPeople = () => {
+    const getPerson = () => {
         fetch("https://swapi.dev/api/people")
         .then(response => response.json())
-        .then(response => setId(response.results))
+        .then(response => getPeople(response.results))
         .catch(err => console.log("ERROR FOR GET: " + err.message))
     }
 
 	useEffect(() => {
-		getPeople()	
-	}, []);
+		getPerson()	
+	}, );
 
     return(
             <div className="cardHolder scrolling-wrapper">
-            {id.map((person) => {
+            {people.map((person, index) => {
                 return (
-                    <CharacterCard person={person} />
+                    <CharacterCard key={index} person={person} />
                 );
             })}
 	        </div>
