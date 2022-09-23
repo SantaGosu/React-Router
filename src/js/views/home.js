@@ -11,7 +11,16 @@ const Home = () => {
 
 
 	return(<>
-		<h1>Characters</h1>
+	<div className="container-flex">
+  		<div className="row">
+    		<div className="col-11">
+				<h1>Characters</h1>
+			</div>
+                <div className="col-1">
+					<button>Favorites</button>
+			</div>
+		</div>
+	</div>
 			<CardContainer />
 			<br />
 		<h1>Vehicles</h1>
