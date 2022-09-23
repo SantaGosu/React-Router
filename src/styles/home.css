@@ -1,4 +1,4 @@
-.card,
+
 .card-img-top{
     width: 400px;
     height: 200px;
@@ -6,6 +6,8 @@
 }
 .card{
     margin: 5px;
+    height: 500px;
+    width: 900px;
 }
 .card-btn{
     width: 70%;
@@ -20,7 +22,8 @@
   }
   .card {
       display: inline-block;
-      max-width: 200px;
+      max-width: 300px;
+      max-height: 500px;
       white-space: initial;
   }
   .cardHolder{
@@ -29,5 +32,5 @@
   .like-btn{
     width: 20%;
     float: right;
-
   }
+  
