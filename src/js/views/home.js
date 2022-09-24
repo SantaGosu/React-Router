@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import VehicleContainer from "./VehicleContainer";
 import CardContainer from "./CardContainer";
 import PlanetContainer from "./PlanetContainer";
+import CharacterInfo from "../component/CharacterInfo/CharacterInfo"
 
 
 
@@ -29,6 +30,7 @@ const Home = () => {
 		<h1>Planets</h1>
 		<PlanetContainer />
             <br />
+		<CharacterInfo />
 		</>
 		)
 }

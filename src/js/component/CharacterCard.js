@@ -18,7 +18,7 @@ const CharacterCard = (props) => {
 					<p className='card-text'>person {props.person.name} </p>
 					<a href="#" className="btn btn-outline-primary card-btn">Learn More</a>
 					<a href="#" className="btn btn-outline-primary like-btn">♥</a>
-					<button onClick={() => this.props.history.push("/Home")}>Take me to Home</button>
+					<button onClick={() => this.props.history.push("/CharacterCard/:id")}>Take me to Home</button>
 				</div>
 			</div>
 		</div>
