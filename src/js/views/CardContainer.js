@@ -1,7 +1,7 @@
 import React, { useEffect, useState  } from 'react';
 import CharacterCard from '../component/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import CharacterInfo from '../component/CharacterInfo/CharacterInfo';
 
 const CardContainer = () => {
     const [people, getPeople] = useState([])
@@ -22,7 +22,7 @@ const CardContainer = () => {
             {people.map((person, index) => {
                 return (
                     <CharacterCard key={index} person={person} />
-                );
+                    );
             })}
 	        </div>
         );

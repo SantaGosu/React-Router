@@ -30,7 +30,7 @@ const Home = () => {
 		<h1>Planets</h1>
 		<PlanetContainer />
             <br />
-		<CharacterInfo />
+		{/* <CharacterInfo /> */}
 		</>
 		)
 }
