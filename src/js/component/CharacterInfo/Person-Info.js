@@ -7,7 +7,7 @@ const Person_Info = () => {
     const [person, getPerson] = useState([]);
 
     const getPeople = () => {
-        fetch("https://swapi.dev/api/people")
+        fetch("https://swapi.dev/api/people/:id")
         .then(response => response.json())
         .then(response => getPerson(response.results))
         .catch(err => console.log("ERROR FOR GET: " + err.message))
@@ -20,7 +20,7 @@ const Person_Info = () => {
     return(
         <>
              <div>
-                {people.map((person, index) => {
+                {person.map((person, index) => {
                     return (
                         <CharacterInfo key={index} person={person} />
                     );
