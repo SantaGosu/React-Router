@@ -1,7 +1,7 @@
 import React, { useEffect, useState  } from 'react';
 import CharacterCard from '../component/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CharacterInfo from '../component/CharacterInfo/CharacterInfo';
+
 
 const CardContainer = () => {
     const [people, getPeople] = useState([])
@@ -18,6 +18,7 @@ const CardContainer = () => {
 	}, );
 
     return(
+        <>
             <div className="cardHolder scrolling-wrapper">
             {people.map((person, index) => {
                 return (
@@ -25,6 +26,8 @@ const CardContainer = () => {
                     );
             })}
 	        </div>
+           
+        </>
         );
 }
 

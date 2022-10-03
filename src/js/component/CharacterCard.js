@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../styles/home.css";
-import { Link } from "react-router-dom";
+
 
 const CharacterCard = (props) => {
 	
@@ -19,9 +19,7 @@ const CharacterCard = (props) => {
 					<p className='card-text'>person {props.person.name} </p>
 					<a href="#" className="btn btn-outline-primary card-btn">Learn More</a>
 					<a href="#" className="btn btn-outline-primary like-btn">♥</a>
-					{/* <Link to={`/Info/${index}`}>
-						<button>CLICK ME</button>
-					</Link> */}
+					
 				</div>
 			</div>
 		</div>
