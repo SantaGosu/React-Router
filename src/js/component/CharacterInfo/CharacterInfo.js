@@ -1,15 +1,13 @@
-import { useParams } from "react-router-dom";
 import React from "react";
 
 const CharacterInfo = (props) => {
-    const {id} = useParams();
+
 
     return( 
         <div className="card ">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Grey.PNG" className="card-img-top"  />
 				<div className="card-body">
 					<h5>Name: {props.person.name}</h5>
-                    <p>id:{props.person.id}</p>
                     <p className="card-text"> Hair Color: {props.person.height} </p>
 					<p className="card-text"> Hair Color: {props.person.mass} </p>
                     <p className="card-text"> Hair Color: {props.person.hair_color} </p>

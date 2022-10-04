@@ -1,10 +1,10 @@
 import React from "react";
 import "../../styles/home.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VehicleContainer from "./VehicleContainer";
-import CardContainer from "./CardContainer";
-import PlanetContainer from "./PlanetContainer";
-import CharacterInfo from "../component/CharacterInfo/CharacterInfo"
+import VehicleContainer from "./Containers/VehicleContainer";
+import CardContainer from "./Containers/CardContainer";
+import PlanetContainer from "./Containers/PlanetContainer";
+
 
 
 
@@ -30,7 +30,6 @@ const Home = () => {
 		<h1>Planets</h1>
 		<PlanetContainer />
             <br />
-		{/* <CharacterInfo /> */}
 		</>
 		)
 }
