@@ -1,13 +1,17 @@
 import {
   BrowserRouter,
   Switch,
-  Route
+  Route, 
+
 } from "react-router-dom";
 import React from "react";
 import Home from "./views/home";
 import CharacterInfo from "./component/CharacterInfo/CharacterInfo";
 
+
 export const Layout = () => {
+
+
   return (
     <div>
       <BrowserRouter>
@@ -15,7 +19,7 @@ export const Layout = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/Home" component={Home} />
-            <Route exact path="/Info/:id" >
+            <Route exact path= {`/Info/:id`} >
                 <CharacterInfo />
             </Route>
           </Switch>

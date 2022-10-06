@@ -1,16 +1,15 @@
 import React, { useEffect, useState  } from 'react';
 import CharacterCard from '../../component/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 
 const CardContainer = () => {
     const [people, getPeople] = useState([]);
-    const {id} = useParams();
-
 
     const getPerson = () => {
-        fetch(`https://swapi.dev/api/people/${parseInt(id)}`)
+        fetch(`https://swapi.dev/api/people/`)
         .then(response => response.json())
         .then(response => getPeople(response.results))
         .catch(err => console.log("ERROR FOR GET: " + err.message))
@@ -25,7 +24,12 @@ const CardContainer = () => {
             <div className="cardHolder scrolling-wrapper">
             {people.map((person, index) => {
                 return (
+                    <>
                     <CharacterCard key={index} person={person} />
+                    <button>
+                    <Link to={`/Info/${index}`} />
+                    </button>
+            </>
                     );
             })}
 	        </div>

@@ -1,13 +1,12 @@
 import React, { useEffect, useState  } from 'react';
 import PlanetCard from '../../component/PlanetCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useParams } from "react-router-dom";
 
 const PlanetContainer = () => {
     const [planet, setPlanet] = useState([]);
 
     const getPlanetApi = () => {
-        fetch(`https://swapi.dev/api/planets/${parseInt(id)}`)
+        fetch(`https://swapi.dev/api/planets/`)
         .then(response => response.json())
         .then(response => setPlanet(response.results))
         .catch(err => console.log("ERROR FOR GET VEHICLE: " + err.message))
