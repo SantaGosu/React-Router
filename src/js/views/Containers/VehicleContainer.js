@@ -1,13 +1,13 @@
 import React, { useEffect, useState  } from 'react';
-import VehicleCard from '../component/Vehicle Card';
+import VehicleCard from '../../component/Vehicle Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { useParams } from "react-router-dom";
 
 const VehicleContainer = () => {
     const [car, setCar] = useState([]);
 
     const getVehicle = () => {
-        fetch("https://swapi.dev/api/vehicles")
+        fetch(`https://swapi.dev/api/vehicles/${parseInt(id)}`)
         .then(response => response.json())
         .then(response => setCar(response.results))
         .catch(err => console.log("ERROR FOR GET VEHICLE: " + err.message))
