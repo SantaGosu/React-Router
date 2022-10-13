@@ -6,11 +6,11 @@ import {
 } from "react-router-dom";
 import React from "react";
 import Home from "./views/home";
-import CharacterInfo from "./component/CharacterInfo/CharacterInfo";
-
+import CharacterInfo from "./component/CharacterInfo";
+import PlanetInfo from "./component/PlanetInfo";
+import VehicleInfo from "./component/VehicleInfo";
 
 export const Layout = () => {
-
 
   return (
     <div>
@@ -18,10 +18,9 @@ export const Layout = () => {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/Home" component={Home} />
-            <Route exact path= {`/Info/:id`} >
-                <CharacterInfo index={":id"}/>
-            </Route>
+            <Route exact path="/character/:id" component={CharacterInfo} />
+            <Route exact path="/planet/:id" component={PlanetInfo} />
+            <Route exact path="/vehicle/id" component={VehicleInfo} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -12,9 +12,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			planets: []
 		},
 		actions: {
+			setPlanets: (data) => {
+				setStore({
+                    planets: data
+                        })
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

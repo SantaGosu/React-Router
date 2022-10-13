@@ -19,9 +19,9 @@ const VehicleContainer = () => {
 
     return(
             <div className="cardHolder scrolling-wrapper">
-            {car.map((Vehicle, index) => {
+            {car.map((vehicle, index) => {
                 return (
-                    <VehicleCard key={index} Vehicle={Vehicle} />
+                    <VehicleCard key={index} index={index} vehicle={vehicle} />
                 );
             })}
 	        </div>

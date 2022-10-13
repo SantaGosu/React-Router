@@ -28,7 +28,7 @@ const Home = () => {
 			<VehicleContainer />
 			<br />
 		<h1>Planets</h1>
-		<PlanetContainer />
+			<PlanetContainer />
             <br />
 		</>
 		)
