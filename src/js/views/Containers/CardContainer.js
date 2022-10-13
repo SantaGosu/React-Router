@@ -25,11 +25,12 @@ const CardContainer = () => {
             {people.map((person, index) => {
                 return (
                     <>
+                    <p>{console.log(index)}</p>
                     <CharacterCard key={index} person={person} />
-                    <button>
-                    <Link to={`/Info/${index}`} />
-                    </button>
-            </>
+                    <Link to={`/Info/${index + 1}`}>
+                    <button>link</button> 
+                    </Link>
+                    </>
                     );
             })}
 	        </div>

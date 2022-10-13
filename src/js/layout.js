@@ -20,7 +20,7 @@ export const Layout = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/Home" component={Home} />
             <Route exact path= {`/Info/:id`} >
-                <CharacterInfo />
+                <CharacterInfo index={":id"}/>
             </Route>
           </Switch>
         </div>
