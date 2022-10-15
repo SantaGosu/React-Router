@@ -1,25 +1,16 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
-		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
-			planets: []
-		},
+		store: { 
+				favorite: [],
+				allPeople: []
+			},
 		actions: {
+			setAllPeople: (people) => {
+				const store = getStore();
+				setStore({allPeople: store.allPeople.concat(people)})
+			},
 			setPlanets: (data) => {
-				setStore({
-                    planets: data
-                        })
+				setStore({planets: data})
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

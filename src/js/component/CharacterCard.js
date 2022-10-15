@@ -3,8 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
 
+
 const CharacterCard = (props) => {
 	
+
 
     return(
 		<>
@@ -20,7 +22,6 @@ const CharacterCard = (props) => {
 					<Link to={`/character/${props.index + 1}`}>
                     <button className="btn btn-outline-primary">Learn More</button> 
                     </Link>
-					<a href="#" className="btn btn-outline-primary like-btn">♥</a>
 				</div>
 			</div>
 		</div>

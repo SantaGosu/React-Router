@@ -1,9 +1,13 @@
-import React, { useEffect, useState,  } from 'react';
+import React, { useEffect, useState, useContext  } from 'react';
 import CharacterCard from '../../component/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Context } from "../../store/appContext";
 
 const CardContainer = () => {
+
     const [people, setPeople] = useState([]);
+
+    // const { store, actions } = useContext(Context);
 
     const getPerson = () => {
         fetch(`https://swapi.dev/api/people/`)
@@ -23,6 +27,7 @@ const CardContainer = () => {
                 return (
                     <>
                     <CharacterCard key={index} index={index} person={person} />
+                    {/* <a href="#" className="btn btn-outline-primary like-btn" onClick={() => (store.favorites.include(person.name) ? alert("in Favorites") : actions.setFavorites(person.name))}>♥</a> */}
                     </>
                     );
             })}
