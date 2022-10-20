@@ -12,15 +12,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setPlanets: (data) => {
 				setStore({planets: data})
 			},
-			setFavorite: (val) => {
-				const store = getStore();
-				setStore({favorite: store.favorite.concat(val) })
-			},
-
-			unsetFavorite: (val) => {
-				const store = getStore();
-				setStore:({favorite: store.favorite})
-			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
