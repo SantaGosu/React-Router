@@ -33,4 +33,10 @@
     width: 20%;
     float: right;
   }
-  
+.Home-Layout{
+  background-color: black !important;
+}
+.card-body{
+  color:aliceblue;
+  background-color: lightslategray;
+}

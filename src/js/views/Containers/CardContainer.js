@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext  } from 'react';
-import CharacterCard from '../../component/CharacterCard';
+import CharacterCard from '../../component/Characters/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Context } from "../../store/appContext";
 
@@ -27,7 +27,6 @@ const CardContainer = () => {
                 return (
                     <>
                     <CharacterCard key={index} index={index} person={person} />
-                    {/* <a href="#" className="btn btn-outline-primary like-btn" onClick={() => (store.favorites.include(person.name) ? alert("in Favorites") : actions.setFavorites(person.name))}>♥</a> */}
                     </>
                     );
             })}

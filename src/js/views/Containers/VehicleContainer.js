@@ -1,5 +1,5 @@
 import React, { useEffect, useState  } from 'react';
-import VehicleCard from '../../component/Vehicle Card';
+import VehicleCard from '../../component/Vehicles/Vehicle Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

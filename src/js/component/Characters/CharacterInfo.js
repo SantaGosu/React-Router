@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-
+import "../../../styles/CardInfo.css";
 
 const CharacterInfo = () => {
 
@@ -20,20 +20,20 @@ const CharacterInfo = () => {
 
 
     return( 
-        <div className="card ">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Grey.PNG" className="card-img-top"  />
-				<div className="card-body">
-					<h5>Name: {character.name}</h5>
-                    <p className="card-text"> height: {character.height} </p>
-					<p className="card-text"> mass: {character.mass} </p>
+        <div className="person-box">
+			<h1 className="character-title">Name: {character.name}</h1>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Grey.PNG" className="img" />
+				<div className="person-info">
+					<h1>Character info:</h1>
+                    <p className="card-text"> Height: {character.height} </p>
+					<p className="card-text"> Mass: {character.mass} </p>
                     <p className="card-text"> Hair Color: {character.hair_color} </p>
 					<p className="card-text"> Eye Color: {character.eye_color} </p>
-                    <p className="card-text"> birth_year: {character.birth_year} </p>
 					<p className="card-text"> Gender: {character.gender} </p>
-					<Link to="/">
-						<button className="btn btn-primary">Back to Home</button>
-					</Link>
 				</div>
+				<Link to="/">
+						<button className="btn btn-primary person-button">Back to Home</button>
+				</Link>
 			</div>
     )
 }

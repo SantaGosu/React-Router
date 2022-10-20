@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext  } from 'react';
-import PlanetCard from '../../component/PlanetCard';
+import PlanetCard from '../../component/Planets/PlanetCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Context  from '../../store/appContext.js'
 import { Route } from 'react-router';
