@@ -3,7 +3,7 @@ import CharacterCard from '../../component/Characters/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Context } from "../../store/appContext";
 
-const CardContainer = () => {
+const PersonContainer = () => {
 
     const [people, setPeople] = useState([]);
 
@@ -26,14 +26,14 @@ const CardContainer = () => {
             {people.map((person, index) => {
                 return (
                     <>
-                    <CharacterCard key={index} index={index} person={person} />
+                    <CharacterCard key={index} index={index} person={person} >
+                        </CharacterCard>
                     </>
                     );
             })}
 	        </div>
-           
         </>
         );
 }
 
-export default CardContainer;
+export default PersonContainer;
