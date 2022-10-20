@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../../styles/home.css";
 import { Link } from "react-router-dom";
 
 
 const CharacterCard = (props) => {
-	
+	const [data, setData] = useState([])
 
+	const AddToList = () => {
+		setData([...data, props.person.name])
+	}
+
+	console.log("this is data " + data)
 
     return(
 		<>
@@ -22,7 +27,7 @@ const CharacterCard = (props) => {
 					<Link to={`/character/${props.index + 1}`}>
                     	<button className="btn btn-dark">Learn More</button> 
                     </Link>
-					<a href="#" className="btn btn-dark like-btn">♥</a>
+					<a href="#" onClick={AddToList} className="btn btn-dark like-btn">♥</a>
 				</div>
 			</div>
 		</div>
