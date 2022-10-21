@@ -13,10 +13,17 @@ const Home = () => {
 
 	return(
 	<>
-		<Navbar/>
-
+	<div className="container-title">
+		<div className="row">
+			<div className="col-10">
+				<h1 className="people-title">People</h1>
+			</div>
+			<div className="col-2">
+				<Navbar/>
+			</div>
+		</div>
+	</div>
 		<div className="Home-Layout">
-			<h1>Characters</h1>
 				<PersonContainer />
 			<br />
 			<h1>Vehicles</h1>

@@ -40,3 +40,13 @@
   color:aliceblue;
   background-color: lightslategray;
 }
+.container-title{
+    text-align: center;
+    padding-top: 10px;
+    border: solid 1px black;
+    width: 100%;
+    background-color: black;
+}
+.people-title{
+  float: left;
+}

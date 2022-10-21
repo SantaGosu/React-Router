@@ -14,7 +14,7 @@ export const Layout = () => {
 
         <div>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Home} />e
             <Route exact path="/character/:id" component={CharacterInfo} />
             <Route exact path="/planet/:id" component={PlanetInfo} />
             <Route exact path="/vehicle/id" component={VehicleInfo} />
