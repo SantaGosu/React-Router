@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../../styles/home.css";
 import { Link } from "react-router-dom";
-
+import { Context } from "../../store/appContext.js";
 
 const CharacterCard = (props) => {
-	const [data, setData] = useState([])
-
-	const AddToList = () => {
-		setData([...data, props.person.name])
-	}
-
-	console.log("this is data " + data)
-
+	const { store, actions } = useContext(Context);
+	console.log(store)
     return(
 		<>
 		<div>
@@ -27,7 +21,7 @@ const CharacterCard = (props) => {
 					<Link to={`/character/${props.index + 1}`}>
                     	<button className="btn btn-dark">Learn More</button> 
                     </Link>
-					<a href="#" onClick={AddToList} className="btn btn-dark like-btn">♥</a>
+					<a href="#" onClick={() => actions.SetPerson(props.person.name) } className="btn btn-dark like-btn">♥</a>
 				</div>
 			</div>
 		</div>

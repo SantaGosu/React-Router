@@ -1,13 +1,10 @@
-import React, { useEffect, useState, useContext  } from 'react';
+import React, { useEffect, useState  } from 'react';
 import CharacterCard from '../../component/Characters/CharacterCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { Context } from "../../store/appContext";
 
 const PersonContainer = () => {
 
     const [people, setPeople] = useState([]);
-
-    // const { store, actions } = useContext(Context);
 
     const getPerson = () => {
         fetch(`https://swapi.dev/api/people/`)

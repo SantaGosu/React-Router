@@ -5,12 +5,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				allPeople: []
 			},
 		actions: {
-			setAllPeople: (people) => {
-				const store = getStore();
-				setStore({allPeople: store.allPeople.concat(people)})
+			SetPerson: (name) => {
+				let store = getStore();
+				setStore({favorite: [...store.favorite, name]})
 			},
-			setPlanets: (data) => {
-				setStore({planets: data})
+			SetPlanet: (name) => {
+				let store = getStore();
+				setStore({favorite: [...store.favorite, name]})
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

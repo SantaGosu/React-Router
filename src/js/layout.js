@@ -5,12 +5,14 @@ import CharacterInfo from "./component/Characters/CharacterInfo";
 import PlanetInfo from "./component/Planets/PlanetInfo";
 import VehicleInfo from "./component/Vehicles/VehicleInfo";
 import Navbar from "./component/Navbar/Navbar";
+import injectContext from "./store/appContext";
 
 export const Layout = () => {
+	const basename = process.env.BASENAME || "";
 
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
 
         <div>
           <Switch>
@@ -25,4 +27,4 @@ export const Layout = () => {
   );
 };
 
-export default Layout;
+export default injectContext(Layout);
